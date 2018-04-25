@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-usuario-editar',
-  template:``
+  template:`editar`
 })
 export class UsuarioEditarComponent implements OnInit {
 

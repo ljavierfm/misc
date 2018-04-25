@@ -1,13 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-usuario-nuevo',
-  template:``
+  template:`nuevo`
 
 })
 export class UsuarioNuevoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _router: ActivatedRoute) {
+    this._router.parent.params.subscribe(parametros => {
+      console.log(`Ruta hija usuario nuevo id: ${parametros.id}`);
+    });
+   }
 
   ngOnInit() {
   }
